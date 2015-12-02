@@ -1,4 +1,6 @@
-public class A {
+package com.oca.revision.demos.misc;
+
+public class ConcatenateNullStringDemo {
 
 	static char[] charArr = { 'g', 'o', 'o', 'd' };
 
@@ -7,20 +9,20 @@ public class A {
 
 	public static void main(String[] args) {
 
-		A a1 = new A();
-		A a2 = new A();
+		ConcatenateNullStringDemo a1 = new ConcatenateNullStringDemo();
+		ConcatenateNullStringDemo a2 = new ConcatenateNullStringDemo();
 
 		System.out.println("a1.newString at beginning= " + a1.newString);
 		System.out.println("a2.newString at beginning= " + a2.newString);
 
 		for (char c : charArr) {
-			// Handling the null
+			// Handling null
 			if (a1.newString == null)
 				a1.newString = "" + c;
 			else
 				a1.newString += c;
 
-			// Not handling the null, in this case a2.newString's initial value
+			// Not handling null, in this case a2.newString's initial value
 			// null would be included in the result
 			a2.newString += "" + c;
 		}
