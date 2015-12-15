@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public class A {
 
 	/*
@@ -32,11 +34,15 @@ public class A {
 	// Not a compile time constant.
 	private static final boolean DEBUG_FLAG;
 
+	final boolean flag = false;
+
 	static {
 		DEBUG_FLAG = false;
 	}
 
 	public static void main(String[] args) {
+		
+
 
 		int x = 0;
 
@@ -69,11 +75,23 @@ public class A {
 		// x = 0;
 		// }
 
-		while (true) {
-			x = 3;
+		while (DEBUG_FLAG) {
+
 		}
+
+		if (new A().flag) {
+
+		}
+
+		// while (true) {
+		// x = 3;
+		// }
 		// Unreachable code : compile time error.
 		// x=4;
+
+		while (new A().flag) {
+
+		}
 
 	}
 
@@ -84,11 +102,31 @@ public class A {
 		System.out.println("World!");// dead code : warning only
 	}
 
-	public void bar() {
+	public void bar(Exception e) {
+
+//		while (flag) {
+//
+//		}
+
+		if (flag) {
+			System.out.println("");
+		}
+
 		System.out.println("Hello");
 		return;
 		// Unreachable code : compile time error
 		// System.out.println("World!");
 	}
+	
+//	public void bar(IOException e){}
 
+}
+
+class B extends A{
+	
+	
+	public void bar(IOException e) {
+		
+	}
+	
 }

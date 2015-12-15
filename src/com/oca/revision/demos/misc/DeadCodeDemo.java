@@ -22,7 +22,9 @@ public class DeadCodeDemo {
 	 * the code correctly with no other changes to the program text.
 	 */
 
-	public static final boolean DEBUG = false;
+	// Compile time constant DEBUG
+	static final boolean DEBUG = false;
+	final boolean flag = false;
 
 	public static void main(String[] args) {
 		int x = 0;
@@ -40,12 +42,27 @@ public class DeadCodeDemo {
 		if (DEBUG) {
 			x = 3;
 		}
-
 		System.out.println(x);
+
+		/**********************************************************/
+
+		while (new DeadCodeDemo().flag) {
+			System.out.println("I'm dead");// dead code
+		}
+
+		/**********************************************************/
 
 		if (true)
 			return;
 		System.out.println("I'm dead");// Dead code
+
+	}
+
+	void foo() {
+
+		if (flag) {
+			System.out.println("");
+		}
 
 	}
 

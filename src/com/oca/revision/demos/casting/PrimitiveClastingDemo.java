@@ -99,9 +99,11 @@ public class PrimitiveClastingDemo {
 		char c1 = '&';
 		byte b1 = (byte) c1;
 		short s1 = (short) c1;
+		int i1 = c1;
 
 		byte bc = '&';
 		short sc = '&';
+		int ic = '&';
 		System.out.println(bc); // Correctly displays number 38 on the console
 		System.out.println(sc); // Correctly displays number 38 on the console
 
