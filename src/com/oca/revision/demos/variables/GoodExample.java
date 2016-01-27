@@ -10,20 +10,20 @@ public class GoodExample {
 	}
 
 	static {
-		s = sM("b");
+		s = sM("b"); // 1
 	}
 
-	static String s2 = sM("c");
-	static String s = sM("a");
+	static String s2 = sM("c"); // 2
+	static String s = sM("a"); // 3
 
 	{
-		as = sM("e");
+		as = sM("e"); // 4
 	}
 
-	String as = sM("d");
+	String as = sM("d"); // 5
 
 	public GoodExample() {
-		as = sM("f");
+		as = sM("f"); // 6
 	}
 
 	public static void main(String[] args) {
