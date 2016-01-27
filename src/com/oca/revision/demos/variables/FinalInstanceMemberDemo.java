@@ -2,7 +2,12 @@ package com.oca.revision.demos.variables;
 
 public class FinalInstanceMemberDemo {
 
-	// instance variables can be public, default, protected, private
+	// instance variables can be public, default, protected, private.
+
+	/*
+	 * final variables cannot be reassigned once assigned a value. final
+	 * variable initialization must happen before the constructor completes.
+	 */
 	final int a;
 
 	/*
