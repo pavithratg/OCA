@@ -13,7 +13,7 @@ public class StaticVariableDemo {
 	 * private static final int b = 20;
 	 */
 
-	// private static variables cannot initialized in object constructors, since
+	// final static variables cannot initialized in object constructors, since
 	// it runs every time a new object is instantiated
 	private static final int B;
 
