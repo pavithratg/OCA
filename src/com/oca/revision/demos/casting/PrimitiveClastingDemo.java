@@ -30,8 +30,8 @@ public class PrimitiveClastingDemo {
 		byte b = 10;
 		char c = 'a';
 		short s = 15;
-		final short sh = 10;
-		final short sho = 200;
+		final short sh = 10;//constant
+		final short sho = 200;//constant
 		int i = 100;
 		long l = 50l;
 		float f = -1.5f;
@@ -50,7 +50,7 @@ public class PrimitiveClastingDemo {
 		char cc = (char) s;
 		short ss = (short) c;
 
-		// This is fine because s is a constant and the value fits into a char.
+		// This is fine because sh is a constant and the value fits into a char.
 		cc = sh;
 
 		/*
@@ -72,7 +72,7 @@ public class PrimitiveClastingDemo {
 		bb = (byte) s;
 		// This is fine because sh is a constant and the value fits into a byte.
 		bb = sh;
-		// Has to cast because although s is a constant, the value is too large
+		// Has to cast because although sho is a constant, the value is too large
 		// to fit into a byte.
 		bb = (byte) sho;
 		ss = b;
