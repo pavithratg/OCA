@@ -2,14 +2,14 @@ public class Test {
 
 	public static void main(String[] args) {
 
-		boolean a = false;
-		boolean b = false;
-		boolean c = false;
+		boolean hasParam = (args == null) ? false : true;
 
-		boolean d = (a = true) || (b = false) && (c = true);
-
-		System.out.println(a + " " + b + " " + c);
+		if (hasParam) {
+			System.out.println("hasParam");
+		}
+		{
+			System.out.println("noParam");
+		}
 
 	}
-
 }
