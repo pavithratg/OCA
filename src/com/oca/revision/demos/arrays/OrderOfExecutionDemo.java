@@ -27,15 +27,15 @@ public class OrderOfExecutionDemo {
 		 * it seems like NullPointerException is not thrown but it actually is.
 		 */
 		try {
-			int x = getArray()[index = 2]++; // The post-increment happen after
-												// the value has been used in
-												// the expression. Therefore
+			int x = getArray()[index = 2]++; // The postfix operation happen
+												// after the value has been used
+												// in the expression. Therefore
 												// the value of x is going to be
 												// 3.
-			int y = ++getArray()[index = 2];// The pre-increment happens before
-											// the value has been used in the
-											// expression, therefore the value
-											// of the y is 4.
+			int y = ++getArray()[index = 2];// The prefix operation happens
+											// before the value has been used in
+											// the expression, therefore the
+											// value of the y is 4.
 			System.out.println("x =" + x + " y = " + y);
 		} catch (Exception e) {
 		}
