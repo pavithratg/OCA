@@ -21,11 +21,14 @@ public class SubEx extends SuperEx {
 	int b = 50;
 
 	static {
-		i = 20;
+		i = 20;// Note this is an inherited static variable, whenever its value
+				// changes, the change effects the original class and as well as
+				// the inherited classes.
 		System.out.println("sub static block i: " + i);
 	}
 
 	{
+		i = 30;
 		System.out.println("b: " + b);
 	}
 
