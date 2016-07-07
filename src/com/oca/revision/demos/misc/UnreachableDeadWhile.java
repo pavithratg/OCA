@@ -14,7 +14,7 @@ public class UnreachableDeadWhile {
 	 * enter the while loop never meets, code within the while loop never gets
 	 * executed, therefore the compilation error occurs.
 	 * 
-	 * As for the example 1 and example 2, I think as the value of flag comes
+	 * As for the example 1 and example 3, I think as the value of flag comes
 	 * incorporated with an object, may be to allow debugging purposes compiler
 	 * allows the code to compile, although it is smart enough to know the codes
 	 * within will never get executed .
